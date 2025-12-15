@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática</title>
+
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+       input {
+        font: normal 20px Arial;
+        width: 100px;
+       }
+       div#res {
+        margin-top: 20px;
+       }
+    </style>
+</head>
+
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="cl1" id="cl1">
+    <input type="number" name="cl2" id="cl2">
+    <input type="button" value="somar" onclick="somar()">
+
+    <div id="res">
+        Resultado
+    </div>
+
+    <script>
+        function somar() {
+            var cll1 = window.document.querySelector('input#cl1')
+            var cll2 = window.document.querySelector('input#cl2')
+            var res = window.document.querySelector('div#res')
+            var n1 = Number(cll1.value)
+            var n2 = Number(cll2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} mais ${n2} é igual a ${s}`
+        }
+    </script>
+</body>
+
+</html>

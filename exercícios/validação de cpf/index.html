@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de CPF</title>
+</head>
+
+<body>
+    
+    <script>
+        const validaCPF = (cpf) => {
+
+            cpf = cpf.replace(/\D/g, '')
+
+            if(cpf.lenght !== 11)
+            console.error('CPF Inválido. Documento não possui 11 caracteres.')
+            return    
+        }
+
+        const proximoDigitoVerificador = (cpfIncompleto) => {
+            let somatoria = 0
+
+            for (let i = 0; i < cpfIncomleto.length; i++)
+            let digitoAtual = cpfIncompleto
+            console.log(digitoAtual)
+        }
+
+
+        console.log(cpf)
+        validaCPF("158.001.580-88")
+    </script>
+</body>
+
+</html>

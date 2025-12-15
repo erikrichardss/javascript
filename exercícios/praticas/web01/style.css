@@ -1,0 +1,28 @@
+body {
+    background-color: cadetblue;
+    font: normal 20px "Sans Serif", Helvetica;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    width: 600px;
+    height: auto;
+    margin: auto;
+
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.botao {
+    border-style: none;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: cadetblue;
+}

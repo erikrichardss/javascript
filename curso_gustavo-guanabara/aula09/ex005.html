@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font: normal 20px "Sans Serif", Helvetica;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando o Dom</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaSript</p>
+    <div class="msg">Clique em mim</div>
+
+    <script>
+        var corpo = window.document.body
+        var d = window.document.querySelector('div.msg')
+        var p = window.document.querySelector('p')
+
+        window.document.write('Agora acho que deu certo: ' + p.innerHTML)
+        p.style.color = 'red'
+
+        corpo.style.background = 'black'
+        window.document.write('Aqui está: ' + d.innerHTML)
+        d.style.background = 'red'
+        
+        /* 
+        window.document.write('Está escrito assim: ' + p1.innerText) 
+
+        var p1 = window.document.getElementsByName('p')[1]
+
+        document.write("Aqui está o texto do segundo parágrafo: " + p1.innerHTML)
+
+        var d = window.document.getElementsByClassName('msg')[0]
+
+        p1.style.color = 'red'
+        */
+    </script>
+</body> 
+
+</html>

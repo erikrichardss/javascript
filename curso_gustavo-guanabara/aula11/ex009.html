@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+
+    <style>
+        body {
+            background-image: linear-gradient(to right, #534B62, #A499B3);
+            font: normal 20px Arial;
+        }
+
+        main {
+            background-color: white;
+            width: 600px;
+            height: auto;
+            margin: auto;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px #1b172587;
+        }
+
+        h1 {
+            text-align: center;
+            font: bold 3em ;
+            color: #534B62;
+            text-shadow: 1px 1px 1px #3d35545f;
+        }
+
+        input {
+            width: 100px;
+            font-size: 20px;
+        }
+
+        .botao {
+            border-style: none;
+        }
+
+        .botao:hover {
+            background-color: #A499B3;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Verificação de Nacionalidade</h1>
+        <input type="text" name="nc1" id="nc1">
+        <input type="button" class="botao" value="Consultar" onclick="consultar()">
+        <div id="res"></div>
+    </main>
+
+    <script>
+        function consultar() {
+        var pais = window.document.querySelector('input#nc1')
+        var res = window.document.querySelector('div#res')
+        var nacionalidade = pais.value
+
+        res.innerHTML = `<p>Você nasceu no <strong>${nacionalidade}</strong></p>`
+
+        if (nacionalidade != 'Brasil') {
+            res.innerHTML += 'Você é <strong>estrangeiro!</strong>'
+        }
+        else {
+            res.innerHTML += 'Você é <strong>brasileiro!</strong>'
+        }
+    }
+
+    </script>
+</body>
+
+</html>
