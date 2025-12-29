@@ -1,36 +1,18 @@
-/* O this serve para específicar exatamente qual objeto você está se referindo, serve também para manipular elementos no doom */
+// tag
+var titulo = document.getElementsByTagName('h1')[0]
 
-var teste = 5
+console.log(titulo)
 
-console.log(this)
-console.log(this.teste)
-console.log(teste)
+var lis = document.getElementsByTagName('li')
 
-let pessoa = {
-    nome: 'Erik',
-    idade: 29,
-    falar: function() {
-        console.log('Olá, tudo bem?')
-    },
-    dizerNome: function() {
-        console.log('Olá, meu nome é ' + this.nome)
-    },
-    aniversario: function() {
-        this.idade += 1
-    },
-    saudacao: function() {
-        return 'Sr. ' + this.nome
-    }
-}
+console.log(lis[3])
 
-pessoa.dizerNome()
+//id
+var paragrafo = document.getElementById('paragrafo')
 
-console.log(pessoa.idade)
+console.log(paragrafo)
 
-pessoa.aniversario()
+//classes
+var itensDaLista = document.getElementsByClassName('item')
 
-console.log(pessoa.idade)
-
-var sdc = pessoa.saudacao()
-
-console.log('Olá, ' + sdc)
+console.log(itensDaLista)
