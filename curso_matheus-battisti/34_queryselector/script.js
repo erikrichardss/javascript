@@ -2,7 +2,7 @@ var itensClasses = document.getElementsByClassName('item')
 
 console.log(itensClasses)
 
-// querySelectorAll
+// querySelectorAll; utilizado para selecionar mais de um elemento
 var itensQuery = document.querySelectorAll('#lista2 li')
 
 console.log(itensQuery)
