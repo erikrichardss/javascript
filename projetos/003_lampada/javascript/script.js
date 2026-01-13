@@ -1,0 +1,35 @@
+const turnOnOff = document.querySelector('#turnOnOff')
+const lamp = document.querySelector('#lamp')
+
+function isLampBroken() {
+    return lamp.src.indexOf('quebrada') > - 1 /* indexOf procura uma string */
+}
+
+function lampOn() {
+    if (!isLampBroken()) {
+        lamp.src = './imagens/lampada-acesa.jpg'
+    }
+}
+
+function lampOff() {
+    if (!isLampBroken()) {
+        lamp.src = './imagens/lampada-desligada.jpg'
+    }
+}
+
+function lampOnOf() {
+    if(turnOnOff.textContent === 'Ligar') {
+        lampOn()
+        turnOnOff.textContent = 'Desligar'
+    } else {
+        lampOff()
+        turnOnOff.textContent = 'Ligar'
+    }
+}
+
+turnOnOff.addEventListener("click", lampOnOf)
+lamp.addEventListener('mouseover', lampOn)
+lamp.addEventListener('mouseleave', lampOff)
+lamp.addEventListener('dblclick', function () {
+    lamp.src = './imagens/lampada-quebrada.jpg'
+})
