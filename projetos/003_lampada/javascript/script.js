@@ -25,7 +25,7 @@ function lampOnOf() {
         lampOff()
         turnOnOff.textContent = 'Ligar'
     }
-}
+} 
 
 turnOnOff.addEventListener("click", lampOnOf)
 lamp.addEventListener('mouseover', lampOn)
