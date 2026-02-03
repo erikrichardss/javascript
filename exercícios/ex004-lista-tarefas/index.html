@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Tarefas</title>
+</head>
+<body>
+  <div class="container">
+      <div class="box">
+          <h1>Lista de Tarefas</h1>
+          <input id="tarefaInput" type="text" placeholder="Digite uma tarefa..." />
+          <button id="btnAdicionar">Adicionar</button>
+          <ul id="listaTarefas"></ul>
+          <p id="mensagemErro"></p>
+      </div>
+  </div>
+
+  <script>
+    var tarefaInput = window.document.querySelector("#tarefaInput");
+    var btnAdicionar = document.querySelector("#btnAdicionar");
+    var listaTarefas = document.querySelector("#listaTarefas");
+    
+
+    btnAdicionar.addEventListener("click", () => {
+
+        var mensagemErro = document.querySelector("#mensagemErro");
+        var li = document.createElement("li");
+        listaTarefas.appendChild(li);
+
+        if (tarefaInput.value != "") {
+            li.textContent = tarefaInput.value;
+
+            tarefaInput = "";
+        } else {
+            mensagemErro.textContent = "Não é possivel adicionar uma lista vazia!";
+            mensagemErro.style.color = "red";
+        }
+
+        var button = document.createElement("button");
+        var body = document.querySelector("body");
+
+        button.appendChild(document.createTextNode("Remover Lista"));
+        body.appendChild(button);
+        
+
+        button.addEventListener("click", () => {
+
+            li.remove(li);
+
+        })
+
+    })
+
+    
+  </script>
+</body>
+</html>

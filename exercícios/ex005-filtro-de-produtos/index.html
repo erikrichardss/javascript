@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filtro de Produtos</title>
+</head>
+<body>
+
+  <h1>Filtro de Produtos</h1>
+
+  <label for="pesquisaInput">Pesquisar:</label>
+  <input
+    id="pesquisaInput"
+    type="text"
+    placeholder="Digite o nome do produto..."
+  />
+
+  <ul id="listaProdutos"></ul>
+
+
+  <script>
+    var pesquisaInput = document.querySelector("#pesquisaInput");
+    var listaProdutos = listaProdutos.querySelector("#listaProdutos");
+    
+    const produtos = [
+        "Teclado", 
+        "Mouse",
+        "Monitor",
+        "Notebook",
+        "Headset",
+        "Mousepad",
+        "Webcam"
+    ];
+
+    function renderizarProdutos(lista) {
+        listaProdutos.textContent = "";
+        
+        if (lista.length === 0) {
+            listaProdutos.textContent = "<li>Nenhnum produto encontrado</li>";
+            return;
+        }
+
+        lista.forEach(produtos => {
+            var li = document.createElement("li");
+            li.textContent = produto;
+            listaProdutos.appendChild(li);
+        });        
+
+    }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterador de Texto</title>
+
+    <script src="script.js" defer></script>
+
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #container {
+            display: block;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            
+            transform: translate(-6%, -50%);
+        }
+
+        input#text, input#submit {
+            display: block;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form action="">
+            <input type="text" name="" id="text" placeholder="Texto:">
+            <input type="submit" value="Enviar" id="submit">
+        </form>
+        <p id="resText"></p>
+    </div>
+</body>
+</html>
