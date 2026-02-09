@@ -66,7 +66,7 @@ nextBtn.addEventListener("click", () => {
         currentItem = 0;
     }
 
-    showPerson(currentItem)
+    showPerson(currentItem);
 
 });
 
