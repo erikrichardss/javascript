@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.6;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid #c59d5f;
+    color: #c59d5f;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: #c59d5f;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: #c59d5f;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.filter-btn:active {
+    transform: scale(0.95);
+}
+
+.menu {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title h2 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.underline {
+    width: 6rem;
+    height: 4px;
+    background: #c59d5f;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.section-center {
+    display: grid;
+    gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .section-center {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.menu-item {
+    display: flex;
+    gap: 1.5rem;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid #c59d5f;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-info header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.item-info h4 {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.price {
+    color: #c59d5f;
+    font-weight: bold;
+}
+
+.item-text {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+@media screen and (max-width: 600px) {
+    .menu-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .photo {
+        width: 100%;
+        height: 200px;
+    }
+
+    .item-info header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
