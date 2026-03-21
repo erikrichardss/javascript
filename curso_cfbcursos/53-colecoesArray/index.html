@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/69fa385a90.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <div class="valor">
+            <label for="">Valor 1</label>
+            <input type="text" name="" id="valor1">
+        </div>
+        <div class="valor">
+            <label for="">Valor 2</label>
+            <input type="text" name="" id="valor2">
+        </div>
+        <div class="valor">
+            <label for="">Resultado</label>
+            <input type="text" name="" id="res" readonly style="cursor: not-allowed;">
+        </div>
+        <div class="operacoes">
+            <button id="botaoSoma">+</button>
+            <button id="botaoSubtrair">-</button>
+            <button id="botaoMultiplicar">x</button>
+            <button id="botaoDividir">/</button>
+        </div>
+        <div class="alerta containerAlerta">
+            <i class="fa-solid fa-x fechar"></i>
+            <p>Não é possível divisão por zero</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <!-- <script src="pratica.js"></script> -->
+</body>
+
+</html>
