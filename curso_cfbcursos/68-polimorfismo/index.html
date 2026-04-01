@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/69fa385a90.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="criarCarro" class="criarCarro">
+        <div class="campoForm">
+            <label for="">Nome</label>
+            <input type="text" name="" id="nome">
+        </div>
+        <div class="campoForm">
+            <label for="">Portas</label>
+            <input type="number" name="" id="portas" value="0">
+        </div>
+        <div class="campoForm">
+            <label for="">Blindagem</label>
+            <input type="number" name="" id="blindagem" disabled value="0">
+        </div>
+        <div class="campoForm">
+            <label for="">Munição</label>
+            <input type="number" name="" id="municao" disabled value="0">
+        </div>
+        <div class="campoForm">
+            <label for="">Tipo</label>
+            <div class="radio">
+                <input type="radio" name="tipo" id="tipoMilitar" value="m"> Militar
+            </div>
+            <div class="radio">
+                <input type="radio" name="tipo" id="tipoNormal" value="n" checked> Normal
+            </div>
+        </div>
+        <div class="campoForm">
+            <button id="adicionarCarro">Adicionar</button>
+        </div>
+    </div>
+    <div id="carros" class="carros"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
